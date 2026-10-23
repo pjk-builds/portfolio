@@ -1,0 +1,17 @@
+# Dependencies and generated Astro output.
+node_modules/
+.astro/
+dist/
+
+# IDE and operating-system metadata.
+.idea/
+.DS_Store
+
+# Local documentation and steering files.
+README.md
+**/README.md
+STEERING.md
+portfolio-project-plan.md
+
+# Local working image copies; public sanitized copies live under public/.
+home-server/images/

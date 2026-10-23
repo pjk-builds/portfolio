@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The story of a private home server built to learn infrastructure from hardware to observability.">
+  <title>A server built instead of rented · Home Server</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Engineering Notebook home">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg>
+      <span class="nav-label">Engineering Notebook</span>
+    </a>
+    <span class="page-context"><span class="context-divider">/</span><span class="nav-label">Home server</span></span>
+    <nav aria-label="Home-server navigation"><div class="home-server-links"><a class="active" href="/home-server/">Overview</a><a href="/home-server/hardware/">Hardware</a><a href="/home-server/security/">Security</a><a href="/home-server/monitoring/">Monitoring</a><a href="/home-server/backups/">Backups</a><a href="/home-server/services/">Services</a><a href="/home-server/lessons/">Lessons</a></div><a href="/projects/"><span class="nav-label">← Projects</span></a></nav>
+  </header>
+
+  <main>
+    <section class="intro section-shell">
+      <p class="eyebrow">HOME SERVER / A BUILD LOG</p>
+      <h1>A server built instead of rented.</h1>
+      <p class="lede">A cloud server? My budget prescribed a screwdriver. So I built a small private platform at home and learned every layer the hard way.</p>
+    <button class="intro-scroll-cue" type="button" aria-label="Scroll to next section"></button></section>
+
+    <section class="section-shell split-section">
+      <div class="homelab-grid">
+        <div>
+          <p class="eyebrow">THE PREMISE</p>
+        <h2>Cloud hosting promised convenience. My wallet filed an objection.</h2>
+        </div>
+        <div class="homelab-copy">
+          <p>I started with a simple plan: assemble the machine, install Linux, and learn each layer by making it work. The plan grew into working configuration, scripts, dashboards, documentation, and a repeatable operating routine.</p>
+          <p>What began as “install Linux and run a few experiments” became a tiny datacenter with a power button. The useful part was not avoiding every failure. It was learning how to make failures visible, recoverable, and safe to explain publicly.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="chapters" class="section-shell story-section">
+      <div class="section-heading">
+        <p class="eyebrow">THE BUILD, IN CHAPTERS</p>
+        <h2>Pick a tile. Follow the rabbit hole.</h2>
+        <p class="section-intro">Each chapter pairs the engineering decision with the problem that made it necessary. Nothing here includes private addresses, credentials, keys, tokens, or unique device identifiers.</p>
+      </div>
+      <div class="story-grid">
+        <button class="story-tile" data-story="origin"><span class="tile-number">01</span><span class="tile-icon">✦</span><strong>Why build it?</strong><small>Cloud hosting promised convenience. My wallet filed an objection.</small></button>
+        <button class="story-tile" data-story="hardware"><span class="tile-number">02</span><span class="tile-icon">▦</span><strong>Choosing the parts</strong><small>Enough power for experiments, not a datacenter fantasy.</small></button>
+        <button class="story-tile" data-story="boot"><span class="tile-number">03</span><span class="tile-icon">◉</span><strong>Making it boot</strong><small>Firmware, Secure Boot, and the first negotiation.</small></button>
+        <button class="story-tile" data-story="linux"><span class="tile-number">04</span><span class="tile-icon">⌘</span><strong>Installing Linux</strong><small>Headless Ubuntu and a CLI-first operating habit.</small></button>
+        <button class="story-tile" data-story="access"><span class="tile-number">05</span><span class="tile-icon">↗</span><strong>Keeping access private</strong><small>SSH keys, firewall boundaries, and Tailscale.</small></button>
+        <button class="story-tile" data-story="debugging"><span class="tile-number">06</span><span class="tile-icon">⌁</span><strong>Debugging the invisible</strong><small>Bluetooth, routes, permissions, and misleading symptoms.</small></button>
+        <button class="story-tile" data-story="power"><span class="tile-number">07</span><span class="tile-icon">⚡</span><strong>Surviving power loss</strong><small>NUT, a UPS, graceful shutdown, and a real unplug test.</small></button>
+        <button class="story-tile" data-story="observability"><span class="tile-number">08</span><span class="tile-icon">◒</span><strong>Seeing the system</strong><small>Docker, Prometheus, Grafana, and alerts.</small></button>
+        <button class="story-tile" data-story="storage"><span class="tile-number">09</span><span class="tile-icon">▤</span><strong>Trusting the storage</strong><small>Health checks, LVM, encrypted backups, and restore tests.</small></button>
+        <button class="story-tile" data-story="flashpoint"><span class="tile-number">10</span><span class="tile-icon">◇</span><strong>Putting it to work</strong><small>Flashpoint: a small service with metrics and load tests.</small></button>
+        <button class="story-tile" data-story="public"><span class="tile-number">11</span><span class="tile-icon">◎</span><strong>Making it public safely</strong><small>A portfolio story without publishing the house keys.</small></button>
+        <button class="story-tile" data-story="lessons"><span class="tile-number">12</span><span class="tile-icon">↺</span><strong>What I learned</strong><small>Verify state, change one thing, keep going.</small></button>
+      </div>
+    </section>
+
+    <section class="section-shell">
+      <div class="feature-card next-card"><div class="card-kicker">NEXT CHAPTER</div><h3>More services, same rules.</h3><p>The platform is ready for self-hosted applications and local AI experiments. New services will be added one at a time, monitored from the start, and kept behind the same private access boundary.</p><div class="tag-row"><span>Docker Compose</span><span>Prometheus</span><span>Grafana</span><span>Private by default</span></div><a class="text-link" href="services/">Explore Services &amp; Experiments →</a></div>
+    </section>
+  </main>
+
+  <dialog class="story-dialog" id="story-dialog" aria-labelledby="story-title">
+    <div class="story-dialog-inner">
+      <button class="dialog-close" type="button" aria-label="Close story">×</button>
+      <div class="story-dialog-copy-wrap"><div class="story-dialog-copy"><p class="eyebrow" id="story-kicker"></p><h2 id="story-title"></h2><p id="story-body"></p><ul class="story-points" id="story-points"></ul><p class="story-lesson"><strong>Lesson:</strong> <span id="story-lesson"></span></p><button class="story-scroll-cue" id="story-scroll-cue" type="button" aria-label="Show more chapter details">⌄</button></div><span class="story-scroll-track" id="story-scroll-track" aria-hidden="true"><span class="story-scroll-thumb" id="story-scroll-thumb"></span></span></div>
+      <div class="story-dialog-media"><div class="story-slides" id="story-slides"></div><div class="slide-controls"><button type="button" id="slide-prev" aria-label="Previous image">←</button><span id="slide-count"></span><button type="button" id="slide-next" aria-label="Next image">→</button></div></div>
+      <nav class="chapter-controls" aria-label="Chapter navigation"><button class="chapter-button chapter-prev" type="button" id="chapter-prev">← Previous chapter</button><button class="chapter-button chapter-next" type="button" id="chapter-next">Next chapter →</button></nav>
+    </div>
+  </dialog>
+  <script is:inline src="story-images.js"></script>
+  <script is:inline src="story.js"></script>
+<script is:inline src="../scroll-cue.js"></script></body>
+</html>

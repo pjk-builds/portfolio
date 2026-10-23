@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The next chapter of a private home server: self-hosted services, observability, and local experiments.">
+  <title>Services &amp; Experiments · Home Server</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Engineering Notebook home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg><span class="nav-label">Engineering Notebook</span></a>
+    <span class="page-context"><span class="context-divider">/</span><span class="nav-label">Home server</span></span>
+    <nav aria-label="Home-server navigation"><div class="home-server-links"><a href="/home-server/">Overview</a><a href="/home-server/hardware/">Hardware</a><a href="/home-server/security/">Security</a><a href="/home-server/monitoring/">Monitoring</a><a href="/home-server/backups/">Backups</a><a class="active" href="/home-server/services/">Services</a><a href="/home-server/lessons/">Lessons</a></div><a href="/projects/"><span class="nav-label">← Projects</span></a></nav>
+  </header>
+
+  <main>
+    <section class="intro section-shell">
+      <p class="eyebrow">HOME SERVER / NEXT CHAPTER</p>
+      <h1>More services, same rules.</h1>
+      <p class="lede">The machine is built. Now it gets useful, one private experiment at a time.</p>
+      <div class="intro-links"><a class="button" href="#running">See what is running</a><a class="text-link" href="../">← Back to the build story</a></div>
+    <button class="intro-scroll-cue" type="button" aria-label="Scroll to next section"></button></section>
+
+    <section class="section-shell split-section">
+      <div class="homelab-grid">
+        <div><p class="eyebrow">THE OPERATING RULE</p><h2>Every service earns its place.</h2></div>
+        <div class="homelab-copy"><p>The platform is ready for self-hosted applications and local AI experiments. New services will be added one at a time, monitored from the start, and kept behind the same private access boundary.</p><p>Each service gets its own Compose project, a health check, useful metrics, resource limits, and a recovery plan. The goal is to learn how the system behaves, not to collect containers.</p></div>
+      </div>
+    </section>
+
+    <section id="running" class="section-shell">
+      <div class="section-heading"><p class="eyebrow">RUNNING NOW</p><h2>The first layer is already useful.</h2><p class="section-intro">These services form the current local platform. Add sanitized screenshots to the matching folders when you want to show the work visually.</p></div>
+      <div class="story-grid service-grid">
+        <button class="story-tile" data-service="compose"><span class="tile-number">01</span><span class="tile-icon">▣</span><strong>Docker Compose</strong><small>Repeatable containers without turning the server into a mystery box.</small></button>
+        <button class="story-tile" data-service="prometheus"><span class="tile-number">02</span><span class="tile-icon">◒</span><strong>Prometheus</strong><small>Metrics make the quiet failures visible.</small></button>
+        <button class="story-tile" data-service="grafana"><span class="tile-number">03</span><span class="tile-icon">◌</span><strong>Grafana</strong><small>Dashboards turn signals into decisions.</small></button>
+        <button class="story-tile" data-service="flashpoint"><span class="tile-number">04</span><span class="tile-icon">◇</span><strong>Flashpoint</strong><small>A real workload gives the platform something to measure.</small></button>
+      </div>
+    </section>
+
+    <section class="section-shell">
+      <div class="feature-card"><div class="card-kicker">PLANNED EXPERIMENTS</div><h3>Curiosity, with guardrails.</h3><p>Future services may include self-hosted applications, local AI tools, richer tracing, and more deliberate failure tests. They will stay personal, private by default, and observable from their first run.</p><div class="tag-row"><span>Self-hosted applications</span><span>Local AI</span><span>OpenTelemetry</span><span>Failure testing</span></div></div>
+    </section>
+  </main>
+
+  <dialog class="story-dialog service-dialog" id="service-dialog" aria-labelledby="service-title">
+    <div class="story-dialog-inner">
+      <button class="dialog-close" type="button" aria-label="Close service chapter">×</button>
+      <div class="story-dialog-copy-wrap"><div class="story-dialog-copy"><p class="eyebrow" id="service-kicker"></p><h2 id="service-title"></h2><p id="service-body"></p><ul class="story-points" id="service-points"></ul><p class="story-lesson"><strong>What I learned:</strong> <span id="service-lesson"></span></p><button class="story-scroll-cue" id="service-scroll-cue" type="button" aria-label="Show more service details">⌄</button></div><span class="story-scroll-track" id="service-scroll-track" aria-hidden="true"><span class="story-scroll-thumb" id="service-scroll-thumb"></span></span></div>
+      <div class="story-dialog-media"><div class="story-slides" id="service-slides"></div><div class="slide-controls"><button type="button" id="service-slide-prev" aria-label="Previous image">←</button><span id="service-slide-count"></span><button type="button" id="service-slide-next" aria-label="Next image">→</button></div></div>
+      <nav class="chapter-controls" aria-label="Service chapter navigation"><button class="chapter-button chapter-prev" type="button" id="service-prev">← Previous service</button><button class="chapter-button chapter-next" type="button" id="service-next">Next service →</button></nav>
+    </div>
+  </dialog>
+  <script is:inline src="../service-images.js"></script>
+  <script is:inline src="../services.js"></script>
+<script is:inline src="../../scroll-cue.js"></script></body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Engineering projects, infrastructure notes, and lessons learned.">
+  <title>Engineering Notebook</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Engineering Notebook home">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg>
+      <span class="nav-label">Engineering Notebook</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="/projects/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h5l2 2h6A1.5 1.5 0 0 1 20 7.5v11a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5z"/></svg><span class="nav-label">Projects</span></a>
+      <a href="/home-server/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14a1 1 0 0 1 1 1v14H4V5a1 1 0 0 1 1-1Zm0 4h14M8 12h2m4 0h2m-8 3h2m4 0h2"/></svg><span class="nav-label">Home server</span></a>
+      <a href="/notes/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12a1 1 0 0 1 1 1v14H5V5a1 1 0 0 1 1-1Zm2 4h8M8 12h8M8 16h5"/></svg><span class="nav-label">Notes</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="intro section-shell">
+      <p class="eyebrow">BUILD LOG / SYSTEMS / LEARNING</p>
+      <h1>Things built, tested, and learned along the way.</h1>
+      <p class="lede">A practical record of software projects and the infrastructure behind them, with the decisions, failures, measurements, and fixes included.</p>
+      <div class="intro-links">
+        <a class="button" href="/projects/">View projects</a>
+        <a class="text-link" href="/home-server/">Explore the home server <span aria-hidden="true">→</span></a>
+      </div>
+    <button class="intro-scroll-cue" type="button" aria-label="Scroll to next section"></button></section>
+
+    <section class="section-shell">
+      <div class="section-heading"><p class="eyebrow">START HERE</p><h2>Choose a thread to follow.</h2><p class="section-intro">The site separates project behavior, infrastructure decisions, and the notes that explain what changed.</p></div>
+      <div class="note-grid">
+        <a class="note-card" href="/projects/"><span>01 / PROJECTS</span><h3>Software and experiments</h3><p>Flashpoint, public interaction, distributed-systems questions, and future local experiments.</p></a>
+        <a class="note-card" href="/home-server/"><span>02 / HOME SERVER</span><h3>The private platform</h3><p>Hardware, Linux, security, Docker, monitoring, UPS protection, backups, and recovery.</p></a>
+        <a class="note-card" href="/notes/"><span>03 / NOTES</span><h3>The evidence around it</h3><p>Debugging records, operating habits, measurements, validation, and lessons learned.</p></a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer section-shell"><span>Engineering Notebook</span><span>Built from documented experiments.</span></footer>
+<script is:inline src="/scroll-cue.js"></script></body>
+</html>
