@@ -1,0 +1,9 @@
+.git
+node_modules
+.astro
+dist
+home-server/images
+README.md
+STEERING.md
+portfolio-project-plan.md
+.DS_Store
