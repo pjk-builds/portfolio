@@ -5,6 +5,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "astro dev",
     "build": "astro build",
+    "build:github": "npm run build && node scripts/prepare-github-pages.mjs",
     "preview": "astro preview"
   },
   "keywords": [],
